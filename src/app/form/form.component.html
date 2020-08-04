@@ -1,0 +1,13 @@
+<form ngNativeValidate #f="ngForm" (ngSubmit)="f.form.valid && agregar()">
+  <div class="agregar">
+    <div class="agregar_contenedor">
+        <select (change)="tipoOperacion($event)" class="agregar_tipo">
+            <option value="ing" selected>+</option>
+            <option value="egr">-</option>
+        </select>
+        <input [(ngModel)]="inputDescripcion" name="descripcion" type="text" class="agregar_descripcion" placeholder="Agregar Descripción" required>
+        <input [(ngModel)]="inputValor" name="valor" type="number" class="agregar_valor" placeholder="Valor" required>
+        <button type="submit" class="agregar_btn"><i class="ion-ios-checkmark-outline"></i></button>
+    </div>
+  </div>
+</form>
